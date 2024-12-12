@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel =  CombineViewModel(combineService: CombineDataService())
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button("Click Button ") {
+                //  viewModel.getUserData()
+            }
+            .buttonStyle(.borderedProminent)
         }
         .padding()
     }
